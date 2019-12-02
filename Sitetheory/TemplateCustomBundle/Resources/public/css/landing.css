@@ -1,0 +1,134 @@
+/* Load LESS Variables */
+/* VARIABLES */
+/* Fonts */
+/* Colors */
+/* LANDING PAGE */
+.landing-stream .stream-item h1.title {
+  font-size: 80px;
+  font-family: 'u.s._101regular', serif;
+  line-height: 1;
+  font-weight: normal;
+}
+@media (max-width: 600px) {
+  .landing-stream .stream-item h1.title {
+    font-size: 60px;
+  }
+}
+.landing-stream .stream-item h2 {
+  font-family: 'u.s._101regular', serif;
+  font-weight: normal;
+}
+.landing-stream .stream-item .item-body p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #1f1f1f;
+}
+.landing-stream .stream-item .module-stream p {
+  font-weight: 400;
+}
+.landing-stream .stream-item .quote {
+  font-weight: 300;
+  font-size: 55px;
+}
+@media (max-width: 999px) {
+  .landing-stream .stream-item .quote {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .landing-stream .stream-item .quote {
+    font-size: 40px;
+  }
+}
+.landing-stream .stream-item .citation {
+  font-size: 18px;
+}
+@media (max-width: 999px) {
+  .landing-stream .stream-item .citation {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .landing-stream .stream-item .citation {
+    font-size: 14px;
+  }
+}
+.landing-stream .stream-item.sitetheory-core-bundle-content-module-type .item-body p.small-bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+.landing-stream .stream-item .alt-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.landing-stream .stream-item .btn.btn-cta {
+  background: none;
+  color: #7932AC;
+  border: 2px solid #7932AC;
+}
+.landing-stream .stream-item .btn.btn-cta:hover {
+  color: #FFF;
+  background: #7932AC;
+}
+/* Home Page Introduction */
+#landing-item-39565::after {
+  transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  height: 3px;
+  width: 86%;
+  max-width: 1400px;
+  background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x left bottom;
+  background-size: 8px;
+}
+/* Home Page Event Module */
+#landing-item-39578::after {
+  display: table;
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 184px;
+  height: 32px;
+  background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/Event-Label.png') no-repeat left center;
+  background-size: 100%;
+}
+#landing-item-39578 .item-vertical-padding {
+  padding-top: 120px;
+}
+#landing-item-39572.sitetheory-core-bundle-content-module-type .item-body p.small-bold {
+  color: #000;
+}
+/* Home Page Quote Image */
+#landing-item-39573.parallax-wrapper .item-vertical-padding,
+#landing-item-39573 .stream-item.has-background-image .item-vertical-padding {
+  padding-top: 260px;
+  padding-bottom: 260px;
+}
+@media (max-width: 999px) {
+  #landing-item-39573.parallax-wrapper .item-vertical-padding,
+  #landing-item-39573 .stream-item.has-background-image .item-vertical-padding {
+    padding-top: 210px;
+    padding-bottom: 210px;
+  }
+}
+@media (max-width: 768px) {
+  #landing-item-39573.parallax-wrapper .item-vertical-padding,
+  #landing-item-39573 .stream-item.has-background-image .item-vertical-padding {
+    padding-top: 190px;
+    padding-bottom: 190px;
+  }
+}
+#landing-item-39573.stream-item .btn.btn-cta {
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+#landing-item-39573.stream-item .btn.btn-cta:hover {
+  background: #FF7A65;
+  color: #FFF;
+  border: 2px solid #FF7A65;
+}
