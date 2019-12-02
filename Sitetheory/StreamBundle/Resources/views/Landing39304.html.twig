@@ -1,0 +1,32 @@
+{% extends 'SitetheoryStreamBundle::Landing.html.twig' %}
+
+{% block link %}
+    {{ parent() }}
+
+    <link rel="{{ styleRel('less') }}" type="text/css"
+          href="{{ asset('/bundles/sitetheorytemplatecustom/css/landing.' ~ styleExt('less')) }}"
+          data-file="landing.css">
+{% endblock link %}
+
+
+{#
+########
+SETTINGS
+########
+#}
+
+
+{#
+################
+CSS & JAVASCRIPT
+################
+#}
+
+
+
+
+
+{% block customStreamItem %}
+
+
+{% endblock customStreamItem %}

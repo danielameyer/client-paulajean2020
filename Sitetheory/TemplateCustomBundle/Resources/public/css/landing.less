@@ -1,0 +1,140 @@
+/* Load LESS Variables */
+@import "variables.less";
+
+
+
+
+/* LANDING PAGE */
+
+
+.landing-stream {
+  .stream-item {
+    h1.title {
+      font-size: 80px;
+      font-family: @fontSecondary;
+      line-height: 1;
+      font-weight: normal;
+      @media (max-width: 600px) {
+        font-size: 60px;
+      }
+    }
+    h2 {
+      font-family: @fontSecondary;
+      font-weight: normal;
+    }
+    .item-body p {
+      font-family: @fontPrimary;
+      font-weight: 300;
+      color: #1f1f1f;
+    }
+    .module-stream p {
+      font-weight: 400;
+    }
+    .quote {
+      font-weight: 300;
+      font-size: 55px;
+      @media (max-width: 999px) {
+        font-size: 45px;
+      }
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
+    }
+    .citation {
+      font-size: 18px;
+      @media (max-width: 999px) {
+        font-size: 15px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    &.sitetheory-core-bundle-content-module-type .item-body p.small-bold {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .alt-title {
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .btn.btn-cta {
+      background: none;
+      color:  @colorPrimary;
+      border: 2px solid @colorPrimary;
+      &:hover {
+        color: #FFF;
+        background:  @colorPrimary;
+      }
+    }
+  }
+}
+
+
+/* Home Page Introduction */
+#landing-item-39565::after {
+  transform: translateX(-50%);
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  height: 3px;
+  width: 86%;
+  max-width: 1400px;
+  background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x left bottom;
+  background-size: 8px;
+}
+
+
+
+/* Home Page Event Module */
+#landing-item-39578 {
+  &::after {
+    display: table;
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 184px;
+    height: 32px;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/Event-Label.png') no-repeat left center;
+    background-size: 100%;
+  }
+  .item-vertical-padding {
+    padding-top: 120px;
+  }
+}
+
+#landing-item-39572 {
+  &.sitetheory-core-bundle-content-module-type .item-body p.small-bold {
+    color: #000;
+  }
+}
+
+
+/* Home Page Quote Image */
+#landing-item-39573 {
+  &.parallax-wrapper .item-vertical-padding,
+  .stream-item.has-background-image .item-vertical-padding {
+    padding-top: 260px;
+    padding-bottom: 260px;
+    @media (max-width: 999px) {
+      padding-top: 210px;
+      padding-bottom: 210px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 190px;
+      padding-bottom: 190px;
+    }
+  }
+  &.stream-item .btn.btn-cta {
+    color: #FFF;
+    border: 2px solid #FFF;
+    &:hover {
+      background: #FF7A65;
+      color: #FFF;
+      border: 2px solid #FF7A65;
+    }
+  }
+}

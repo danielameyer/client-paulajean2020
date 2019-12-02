@@ -1,0 +1,176 @@
+{% extends 'SitetheoryTemplateBundle::shell.html.twig' %}
+
+{% block link %}
+    {{ parent() }}
+
+        <link rel="{{ styleRel('less') }}" type="text/css"
+              href="{{ asset('/bundles/sitetheorytemplatecustom/css/site.' ~ styleExt('less')) }}"
+              data-file="site.css">
+        <link rel="shortcut icon" href="{{ asset('/bundles/sitetheorytemplatecustom/images/favicon.png') }}" type="image/x-icon">
+
+{% endblock link %}
+
+{#
+########
+SETTINGS
+########
+#}
+
+{% set socialStyle = 'circle' %}
+
+
+{# Remove padding on header and header image so mini header can go full width #}
+{% set headerRetractingStructure = '' %}
+{% set headerStructure = '' %}
+{% set headerImageSettings = '' %}
+
+
+{# Make mobile drawer slide in from right #}
+{% set mobileDrawerDirection = 'mobile-drawer-right' %}
+
+{# Hide Sidebar on Desktop #}
+{% set displaySidebar = false %}
+
+{# Centered version of footer #}
+{% set footerCentered = true %}
+
+{# Set Footer Brightness #}
+{% set footerBrightness = 'dark' %}
+
+{# Set Footer Site Map Brightness #}
+{% set siteMapBrightness = 'dark' %}
+
+
+{#
+###########
+SPECIAL APP CLASS TO CONTROL SIDEBAR TOGGLE
+###########
+#}
+
+
+
+{#
+######
+LAYOUT
+######
+#}
+
+{% block contributeBtn %}
+    <a href="https://secure.actblue.com/donate/bnc-paulajean2020?refcode=website_link&amount=28&recurring=true" target="_blank" class="btn btn-contribute">Support the Campaign</a>
+{% endblock contributeBtn %}
+
+{% block contributeLink %}
+    https://secure.actblue.com/donate/bnc-paulajean2020?refcode=website_link&amount=28&recurring=true
+{% endblock contributeLink %}
+
+
+{% block headerContent %}
+
+    <div class="header-content" ng-cloak>
+        <div class="header1" layout="column" layout-gt-xs="row" layout-align-gt-xs="space-between center" flex>
+
+            <div hide-xs hide-sm>
+                {{ block('socialMedia') }}
+            </div>
+
+            <div class="header-menu-container" flex>
+                {% block navMain %}
+                    <div class="menu menu-nested header-menu"
+                         role="navigation">
+                        {{ block('navHeader') }}
+                    </div>
+                {% endblock navMain %}
+            </div>
+
+
+            <div class="float-links">
+                {{ block('contributeBtn') }}
+            </div>
+
+        </div>
+        <div class="header2">
+            <div class="header2-content" layout="column" layout-gt-xs="row" layout-align-gt-xs="center center" flex>
+                <div class="header-site-logo" flex flex="100" flex-gt-xs="70">
+                    <div class="header-logo-border">
+                        <a href="/" aria-label="Go to Home"><img
+                                    src="{{ asset('bundles/sitetheorytemplatecustom/images/Paula-Jean-Swearengin-2020-Logo.png') }}"
+                                    alt="Brand New Congress Logo"></a>
+                    </div>
+                </div>
+                <div class="header-west-virginia" flex flex-gt-xs="30">
+                    <div class="header-map-container">
+                        <p>For the Great State of West Virginia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock headerContent %}
+
+ {#Retracting header uses only a few elements from the full header. Must come before mini header which is identical.#}
+{% block headerRetractingContent %}
+    <div ng-cloak>
+        <div layout="row" layout-align="space-between center" flex>
+            <div class="logo-retracting-header" no-flex flex-xs="50" flex-gt-xs="20">
+                <a href="/">
+                    <img src="{{ asset('bundles/sitetheorytemplatecustom/images/Paula-Jean-Swearengin-2020-Logo-Small.png') }}" alt="Brand New Congress Logo">
+                </a>
+            </div>
+            <div flex>
+                {{ block('navMain') }}
+            </div>
+            <div class="retracting-contribute" no-flex flex="20">
+                {{ block('contributeBtn') }}
+            </div>
+        </div>
+    </div>
+{% endblock headerRetractingContent %}
+
+
+{% block mobileSidebarContent %}
+    {{ parent() }}
+    {{ block('contributeBtn') }}
+{% endblock mobileSidebarContent %}
+
+
+
+
+
+
+{% block footerExtras %}
+    <a class="btn footer-cta-btn" href="{{ block('contributeLink') }}">Donate to the Campaign</a>
+    <a class="footer-logo" href="/">
+        <img src="{{ asset('bundles/sitetheorytemplatecustom/images/Paula-Jean-Swearengin-Logo-Mark.png') }}" alt="Paul Jean 2020 Logo">
+        <h4>Paul Jean 2020</h4>
+    </a>
+{% endblock footerExtras %}
+
+
+{% block vendorCreditLogo %}
+<div class="vendor-and-platform-logos">
+    <div class="vendor-logo-image">
+        <a href="//gutensite.com" target="_blank">
+            <div class="vendor-logo-svg">
+                {% embed '@SitetheoryTemplateCustomBundle/Resources/public/images/gutensite-logo-footer-credit.svg' %}{% block id %}sitetheory-logo-footer-logo{% endblock %}{% endembed %}
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock vendorCreditLogo %}
+
+
+{# TEMPORARY FOOTER SITE INFO #}
+{#{% block footerSiteInfo %}#}
+    {#<div class="footer-site-info site-contact-short font-body"><a href="mailto:us@brandnewcongress">us@brandnewcongress</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="tel:202-769-3944">202-769-3944</a>&nbsp;&nbsp;|&nbsp;&nbsp;PO Box 1024 Springdale, AR 72765<br>Paid for by Brand New Congress, not authorized by any candidate or candidate committee.#}
+    {#</div>#}
+{#{% endblock footerSiteInfo %}#}
+
+{% block footerSiteMap %}
+{% endblock footerSiteMap %}
+
+{% block footer %}
+
+    {{ parent() }}
+{% endblock footer %}
+
