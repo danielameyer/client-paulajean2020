@@ -34,7 +34,7 @@
     "@angular/cli": "^8.3.6",
     "@angular/compiler": "^8.2.8",
     "@angular/compiler-cli": "^8.2.8",
-    "@angular/core": "^8.2.8",
+    "@angular/core": "^11.0.5",
     "@angular/language-service": "^8.2.8",
     "@babel/parser": "^7.4.5",
     "@babel/types": "^7.4.4",
