@@ -107,7 +107,7 @@
     "sass": "^1.23.3",
     "sinon": "^7.3.2",
     "steal": "^2.2.3",
-    "stylelint": "^10.1.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^18.0.0",
     "systemjs": "^6.1.4",
     "terser": "^4.0.0",
